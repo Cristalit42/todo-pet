@@ -1,0 +1,145 @@
+html, body {
+  font-family: "Inter";
+  background-color: gray;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.element-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.element {
+  display: flex;
+  align-items: start;
+  padding: 20px 0px;
+  border-bottom: 1px solid #000;
+  width: 100%;
+
+}
+
+.element:last-child {
+  border-bottom: none;
+}
+
+.element-edit {
+  margin-left: auto;
+}
+
+.element-text {
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 50px;
+}
+
+.add-btn-box{
+  display: flex;
+  justify-content: center;
+}
+
+.element-add {
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+  /* Customize the label (the label-container) */
+
+
+  .label-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #CAC6C6;
+    border: 3px solid #323131;
+    border-radius: 8px;
+    transition: all .2s;
+
+  }
+
+  /* On mouse-over, add a grey background color */
+  .label-container:hover input~.checkmark {
+    background-color: #b93333;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .label-container input:checked~.checkmark {
+    background-color: #323131;
+  }
+
+  .label-container input:checked~.checkmark::after {
+    display: flex;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .label-container input:checked~.checkmark:after {
+    display: flex;
+  }
+
+  /* Style the checkmark/indicator */
+  .label-container .checkmark:after {
+    content: "\2713";
+    width: 25px;
+    height: 25px;
+    color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: absolute;
+    top: -4px;
+    left: -2px;
+    font-size: 16px;
+    display: none;
+
+  }
